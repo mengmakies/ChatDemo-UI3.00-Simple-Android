@@ -1,0 +1,278 @@
+#======================= special
+s/\([mM]sg\)\.status\>\s*=[^=]\(.*\);$/\1.setStatus(\2);/g
+s/\([mM]sg\)\.status\>\s*==/\1.status() ==/g
+
+s/\([mM]sg\)\.direct\>\s*=[^=]\(.*\);$/\1.setdirect(\2);/g
+s/\([mM]sg\)\.direct\>\s*==/\1.direct() ==/g
+/=/!s/\([mM]\)\.direct\>/\1.direct()/g
+
+s/\([mM]sg\)\.type\>\s*==/\1.getType() ==/g
+/=/!s/\([mM]\)\.type\>/\1.getType()/g
+
+s/\([mM]sg\)\.msgTime\>\s*=[^=]\(.*\);$/\1.setMsgTime(\2);/g
+s/\([mM]sg\)\.msgTime\>\s*==/\1.getMsgTime() ==/g
+/=/!s/\([mM]\)\.msgTime\>/\1.getMsgTime()/g
+
+s/\([mM]sg\)\.chatType\>\s*=[^=]\(.*\);$/\1.getChatType(\2);/g
+s/\([mM]sg\)\.chatType\>\s*==/\1.getChatType() ==/g
+/=/!s/\([mM]\)\.chatType\>/\1.getChatType()/g
+
+s/\([mM]sg\)\.progress\>\s*==/\1.progress() ==/g
+/=/!s/\([mM]\)\.progress\>/\1.progress()/g
+
+s/\([mM]sg\)\.unread\>\s*=[^=]\(.*\);$/\1.setUnread(\2);/g
+s/\([mM]sg\)\.unread\>\s*==/\1.isUnread() ==/g
+/=/!s/\([mM]\)\.unread\>/\1.isUnread()/g
+
+s/\(^\s*\)\([mM]sg\)\.isAcked\>\s*=[^=]\(.*\);$/\/\/\1hyphenate alert: not recommend setAcked manually, ackMessageRead will auto set the flag\n\1\2.setAcked(\3);/g
+s/\([mM]sg\)\.isAcked\>\s*==/\1.isAcked() ==/g
+/=/!s/\([mM]\)\.isAcked\>/\1.isAcked()/g
+
+s/\([mM]sg\)\.msgId\>\s*=[^=]\(.*\);$/\1.setMsgId(\2);/g
+s/\([mM]sg\)\.msgId\>\s*==/\1.getMsgId() ==/g
+/=/!s/\([mM]\)\.msgId\>/\1.getMsgId()/g
+
+s/\([mM]sg\)\.isDelivered\>\s*=[^=]\(.*\);$/\1.setDelivered(\2);/g
+s/\([mM]sg\)\.isDelivered\>\s*==/\1.isDelivered() ==/g
+/=/!s/\([mM]\)\.isDelivered\>/\1.isDelivered()/g
+
+s/\([mM]sg\)\.from\>\s*=[^=]\(.*\);$/\1.setFrom(\2);/g
+s/\([mM]sg\)\.from\>\s*==/\1.getFrom() ==/g
+/=/!s/\([mM]\)\.from\>/\1.getFrom()/g
+
+s/\([mM]sg\)\.to\>\s*=[^=]\(.*\);$/\1.setTo(\2);/g
+s/\([mM]sg\)\.to\>\s*==/\1.getTo() ==/g
+/=/!s/\([mM]\)\.to\>/\1.getTo()/g
+
+
+
+s/\([mM]essage\)\.status\>\s*=[^=]\(.*\);$/\1.setStatus(\2);/g
+s/\([mM]essage\)\.status\>\s*==/\1.status() ==/g
+/=/!s/\([mM]essage\)\.status\>/\1.status()/g
+
+s/\([mM]essage\)\.direct\>\s*=[^=]\(.*\);$/\1.setdirect(\2);/g
+s/\([mM]essage\)\.direct\>\s*==/\1.direct() ==/g
+/=/!s/\([mM]essage\)\.direct\>/\1.direct()/g
+
+s/\([mM]essage\)\.type\>\s*==/\1.getType() ==/g
+/=/!s/\([mM]essage\)\.type\>/\1.type()/g
+
+s/\([mM]essage\)\.msgTime\>\s*=[^=]\(.*\);$/\1.setMsgTime(\2);/g
+s/\([mM]essage\)\.msgTime\>\s*==/\1.getMsgTime() ==/g
+/=/!s/\([mM]essage\)\.msgTime\>/\1.getMsgTime()/g
+
+s/\([mM]essage\)\.chatType\>\s*=[^=]\(.*\);$/\1.setChatType(\2);/g
+s/\([mM]essage\)\.chatType\>\s*==/\1.getChatType() ==/g
+/=/!s/\([mM]essage\)\.chatType\>/\1.getChatType()/g
+
+s/\([mM]essage\)\.progress\>\s*==/\1.progress() ==/g
+/=/!s/\([mM]essage\)\.progress\>/\1.progress()/g
+
+s/\([mM]essage\)\.unread\>\s*=[^=]\(.*\);$/\1.setUnread(\2);/g
+s/\([mM]essage\)\.unread\>\s*==/\1.isUnread() ==/g
+/=/!s/\([mM]essage\)\.unread\>/\1.isUnread()/g
+
+s/\(^\s*\)\([mM]essage\)\.isAcked\>\s*=[^=]\(.*\);$/\/\/\1hyphenate alert: not recommend setAcked manually, ackMessageRead will auto set the flag\n\1\2.setAcked(\3);/g
+s/\([mM]essage\)\.isAcked\>\s*==/\1.isAcked() ==/g
+s/\([mM]essage\)\.isAcked\>\s*$/\1.isAcked() /g
+/=/!s/\([mM]essage\)\.isAcked\>/\1.isAcked()/g
+
+s/\([mM]essage\)\.msgId\>\s*=[^=]\(.*\);$/\1.setMsgId(\2);/g
+s/\([mM]essage\)\.msgId\>\s*==/\1.getMsgId() ==/g
+/=/!s/\([mM]essage\)\.msgId\>/\1.getMsgId()/g
+
+s/\([mM]essage\)\.isDelivered\>\s*=[^=]\(.*\);$/\1.setDelivered(\2);/g
+s/\([mM]essage\)\.isDelivered\>\s*==/\1.isDelivered() ==/g
+/=/!s/\([mM]essage\)\.isDelivered\>/\1.isDelivered()/g
+
+s/\([mM]essage\)\.from\>\s*=[^=]\(.*\);$/\1.setFrom(\2);/g
+s/\([mM]essage\)\.from\>\s*==/\1.getFrom() ==/g
+/=/!s/\([mM]essage\)\.from\>/\1.getFrom()/g
+
+s/\([mM]essage\)\.to\>\s*=[^=]\(.*\);$/\1.setTo(\2);/g
+s/\([mM]essage\)\.to\>\s*==/\1.getTo() ==/g
+/=/!s/\([mM]essage\)\.to\>/\1.getTo()/g
+
+
+
+#======================= normal
+s/EMChatOptions\>/EMOptions/
+
+s/\<CmdMessageBody\>/EMCmdMessageBody/g
+s/\<FileMessageBody\>/EMFileMessageBody/g
+s/\<NormalFileMessageBody\>/EMNormalFileMessageBody/g
+s/\<ImageMessageBody\>/EMImageMessageBody/g
+s/\<LocationMessageBody\>/EMLocationMessageBody/g
+s/\<TextMessageBody\>/EMTextMessageBody/g
+s/\<VideoMessageBody\>/EMVideoMessageBody/g
+s/\<VoiceMessageBody\>/EMVoiceMessageBody/g
+
+s/conversation.loadMoreGroupMsgFromDB\>/conversation.loadMoreMsgFromDB/
+
+s/EMChat.getInstance().isLoggedIn()/EMClient.getInstance().isLoggedInBefore()/
+s/EMChat.getInstance().setDebugMode/EMClient.getInstance().setDebugMode/
+s/EMChat.getInstance().uploadLog/EMClient.getInstance().uploadLog/
+s/EMChatManager.getInstance().ackMessageRead/EMClient.getInstance().chatManager().ackMessageRead/
+s/EMChatManager.getInstance().addCallStateChangeListener/EMClient.getInstance().callManager().addCallStateChangeListener/
+s/EMChatManager.getInstance().addChatRoomChangeListener/EMClient.getInstance().chatroomManager().addChatRoomChangeListener/
+s/EMChatManager.getInstance().addConnectionListener/EMClient.getInstance().addConnectionListener/
+s/EMChatManager.getInstance().answerCall();/EMClient.getInstance().callManager().answerCall();/
+s/EMChatManager.getInstance().asyncFetchMessage/EMClient.getInstance().chatManager().downloadThumbnail/
+s/EMChatManager.getInstance().clearConversation/EMClient.getInstance().chatManager().deleteConversation/
+s/EMChatManager.getInstance().deleteConversation/EMClient.getInstance().chatManager().deleteConversation/
+s/EMChatManager.getInstance().createAccountOnServer/EMClient.getInstance().createAccount/
+s/EMChatManager.getInstance().downloadFile/EMClient.getInstance().chatManager().downloadFile/
+#s/EMChatManager.getInstance/EMClient.getInstance/
+s/EMChatManager.getInstance().endCall();/EMClient.getInstance().callManager().endCall();/
+s/EMChatManager.getInstance().fetchChatRoomFromServer/EMClient.getInstance().chatroomManager().fetchChatRoomFromServer/
+s/EMChatManager.getInstance().fetchPublicChatRoomsFromServer/EMClient.getInstance().chatroomManager().fetchPublicChatRoomsFromServer/
+s/EMChatManager.getInstance().getAllChatRooms();/EMClient.getInstance().chatroomManager().getAllChatRooms();/
+s/^\(\s*\)\(.*\)EMChatManager.getInstance().getAllConversations/\/\/\1hyphenate alert: getAllConversations return type change from Hashtable to Map\n\1\2EMClient.getInstance().getAllConversations/
+s/EMChatManager.getInstance().getChatOptions()/EMClient.getInstance().getOptions()/
+s/EMChatManager.getInstance().getChatRoom/EMClient.getInstance().chatroomManager().getChatRoom/
+s/EMChatManager.getInstance().getConversationByType/EMClient.getInstance().chatManager().getConversation/
+s/EMChatManager.getInstance().getConversation/EMClient.getInstance().chatManager().getConversation/
+s/EMChatManager.getInstance().getCurrentUser();/EMClient.getInstance().getCurrentUser();/
+s/EMChatManager.getInstance().getCurrentUser()/EMClient.getInstance().getCurrentUser()/
+s/EMChatManager.getInstance().getIncomingCallBroadcastAction()/EMClient.getInstance().callManager().getIncomingCallBroadcastAction()/
+s/EMChatManager.getInstance().getMessage/EMClient.getInstance().chatManager().getMessage/
+s/EMChatManager.getInstance().getRobotsFromServer();/EMClient.getInstance().getRobotsFromServer();/
+s/EMChatManager.getInstance().getUnreadMsgsCount();/EMClient.getInstance().chatManager().getUnreadMsgsCount();/
+s/EMChatManager.getInstance().isConnected()/EMClient.getInstance().isConnected()/
+s/EMChatManager.getInstance().isDirectCall()/EMClient.getInstance().callManager().isDirectCall()/
+s/EMChatManager.getInstance().isSlientMessage/EMClient.getInstance().chatManager().isSlientMessage/
+s/EMChatManager.getInstance().joinChatRoom/EMClient.getInstance().chatroomManager().joinChatRoom/
+s/EMChatManager.getInstance().leaveChatRoom/EMClient.getInstance().chatroomManager().leaveChatRoom/
+s/EMChatManager.getInstance().loadAllConversations();/EMClient.getInstance().chatManager().loadAllConversations();/
+s/EMChatManager.getInstance().login/EMClient.getInstance().login/
+s/EMChatManager.getInstance().logout/EMClient.getInstance().logout/
+s/EMChatManager.getInstance().makeVideoCall/EMClient.getInstance().callManager().makeVideoCall/
+s/EMChatManager.getInstance().makeVoiceCall/EMClient.getInstance().callManager().makeVoiceCall/
+s/EMChatManager.getInstance().rejectCall();/EMClient.getInstance().callManager().rejectCall();/
+s/EMChatManager.getInstance().removeCallStateChangeListener/EMClient.getInstance().callManager().removeCallStateChangeListener/
+s/EMChatManager.getInstance().removeConnectionListener/EMClient.getInstance().removeConnectionListener/
+s/EMChatManager.getInstance().saveMessage(\(.*\),.*)/EMClient.getInstance().chatManager().saveMessage(\1)/
+s/EMChatManager.getInstance().saveMessage(\([^,]*\))/EMClient.getInstance().chatManager().saveMessage(\1)/
+s/EMChatManager.getInstance().sendMessage/EMClient.getInstance().chatManager().sendMessage/
+s/EMChatManager.getInstance().setMessageListened/EMClient.getInstance().chatManager().setMessageListened/
+s/EMChatManager.getInstance().updateCurrentUserNick/EMClient.getInstance().updateCurrentUserNick/
+s/\(^\s*\)EMChatManager.getInstance().setChatOptions/\/\/\1hyphenate alert: Use EMChatOptions instead, in EMClient.getInstance().init\n\1EMChatManager.getInstance().setChatOptions/
+s/EMContactManager.getInstance().addContact/EMClient.getInstance().contactManager().addContact/
+s/EMContactManager.getInstance().addUserToBlackList/EMClient.getInstance().contactManager().addUserToBlackList/
+s/EMContactManager.getInstance().deleteContact/EMClient.getInstance().contactManager().deleteContact/
+s/EMContactManager.getInstance().deleteUserFromBlackList/EMClient.getInstance().contactManager().removeUserFromBlackList/
+s/EMContactManager.getInstance().getBlackListUsernames\>/EMClient.getInstance().contactManager().getBlackListUsernames/
+s/EMContactManager.getInstance().getBlackListUsernamesFromServer/EMClient.getInstance().contactManager().getBlackListFromServer/
+s/EMContactManager.getInstance().getContactUserNames();/EMClient.getInstance().contactManager().getAllContactsFromServer();/
+s/EMContactManager.getInstance().setContactListener/EMClient.getInstance().contactManager().setContactListener/
+s/EMContactManager.getInstance().saveBlackList/EMClient.getInstance().contactManager().saveBlackList/
+s/EMGroupManager.getInstance().addGroupChangeListener/EMClient.getInstance().groupManager().addGroupChangeListener/
+s/EMGroupManager.getInstance().addUsersToGroup/EMClient.getInstance().groupManager().addUsersToGroup/
+s/EMGroupManager.getInstance().applyJoinToGroup/EMClient.getInstance().groupManager().applyJoinToGroup/
+s/EMGroupManager.getInstance().asyncGetGroupsFromServer/EMClient.getInstance().groupManager().asyncGetGroupsFromServer/
+s/EMGroupManager.getInstance().blockGroupMessage/EMClient.getInstance().groupManager().blockGroupMessage/
+s/EMGroupManager.getInstance().blockUser/EMClient.getInstance().groupManager().blockUser/
+s/EMGroupManager.getInstance().changeGroupName/EMClient.getInstance().groupManager().changeGroupName/
+/EMGroupManager.getInstance().createOrUpdateLocalGroup/ d
+s/\(^\s*\)EMGroupManager.getInstance().createPrivateGroup/\/\/\1hyphenate alert: createGroup use EMGroupOptions as param\n\1EMClient.getInstance().groupManager().createGroup/
+s/\(^\s*\)EMGroupManager.getInstance().createPublicGroup/\/\/\1hyphenate alert: createGroup use EMGroupOptions as param\n\1EMClient.getInstance().groupManager().createGroup/
+s/EMGroupManager.getInstance().exitAndDeleteGroup/EMClient.getInstance().groupManager().destroyGroup/
+s/EMGroupManager.getInstance().exitFromGroup/EMClient.getInstance().groupManager().leaveGroup/
+s/EMGroupManager.getInstance().getAllGroups()/EMClient.getInstance().groupManager().getAllGroups()/
+s/EMGroupManager.getInstance().getBlockedUsers/EMClient.getInstance().groupManager().getBlockedUsers/
+s/EMGroupManager.getInstance().getGroupsFromServer();/EMClient.getInstance().groupManager().getJoinedGroupsFromServer();/
+s/EMGroupManager.getInstance().getGroup/EMClient.getInstance().groupManager().getGroup/
+s/EMGroupManager.getInstance().getGroupFromServer/EMClient.getInstance().groupManager().getGroupFromServer/
+s/EMGroupManager.getInstance().getPublicGroupsFromServer/EMClient.getInstance().groupManager().getPublicGroupsFromServer/
+s/EMGroupManager.getInstance().inviteUser/EMClient.getInstance().groupManager().inviteUser/
+s/EMGroupManager.getInstance().joinGroup/EMClient.getInstance().groupManager().joinGroup/
+s/EMGroupManager.getInstance().loadAllGroups/EMClient.getInstance().groupManager().loadAllGroups/
+s/EMGroupManager.getInstance().removeUserFromGroup/EMClient.getInstance().groupManager().removeUserFromGroup/
+s/EMGroupManager.getInstance().unblockGroupMessage/EMClient.getInstance().groupManager().unblockGroupMessage/
+s/EMGroupManager.getInstance().unblockUser/EMClient.getInstance().groupManager().unblockUser/
+s/EMChatManager.getInstance().acceptInvitation/EMClient.getInstance().contactManager().acceptInvitation/
+s/EMGroupManager.getInstance().acceptApplication/EMClient.getInstance().groupManager().acceptApplication/
+s/EMChatManager.getInstance().setGCMProjectNumber/EMClient.getInstance().setGCMProjectNumber/
+s/EMChatManager.getInstance().setMipushConfig/EMClient.getInstance().setMipushConfig/
+/EMChat.getInstance().setAppInited/d
+s/\(^\s*\)EMChat.getInstance().init/\/\/\1hyphenate alert: use other function instead: EMClient.getInstance().init(Context context, EMChatOptions options);\n\1EMChat.getInstance().init/
+
+s/videoBody.getLength/videoBody.getDuration/
+/options.setUseRoster/d
+/import com.easemob.chat.EMChat;/d
+s/\<getMsgBlocked\>/isMsgBlocked/g
+#easemob -> hyphenate: sdk
+s/import com.easemob.EMCallBack/import com.hyphenate.EMCallBack/
+s/import com.easemob.EMChangeEventData/import com.hyphenate.EMChangeEventData/
+s/import com.easemob.EMChatRoomChangeListener/import com.hyphenate.EMChatRoomChangeListener/
+s/import com.easemob.EMConnectionListener/import com.hyphenate.EMConnectionListener/
+s/import com.easemob.EMConversationListener/import com.hyphenate.EMConversationListener/
+s/import com.easemob.EMError/import com.hyphenate.EMError/
+s/import com.easemob.EMGroupChangeListener/import com.hyphenate.EMGroupChangeListener/
+s/import com.easemob.EMMessageChangeEventData/import com.hyphenate.EMMessageChangeEventData/
+s/import com.easemob.EMMessageListener/import com.hyphenate.EMMessageListener/
+s/import com.easemob.EMValueCallBack/import com.hyphenate.EMValueCallBack/
+
+s/import com.easemob.analytics\>/import com.hyphenate.analytics/
+s/import com.easemob.chat\>/import com.hyphenate.chat/
+s/import com.easemob.cloud\>/import com.hyphenate.cloud/
+s/import com.easemob.exceptions\>/import com.hyphenate.exceptions/
+s/import com.easemob.monitor\>/import com.hyphenate.monitor/
+s/import com.easemob.util\>/import com.hyphenate.util/
+
+s/EaseMobException/HyphenateException/
+
+#easemob -> hyphenate: easeui
+s/import com.easemob.easeui/import com.hyphenate.easeui/
+
+#EMError.errorCode
+s/EMError.NO_ERROR/EMError.EM_NO_ERROR/
+s/EMError.ERROR_EXCEPTION/EMError.GENERAL_ERROR/
+#/EMError.ERROR_SEND/d
+s/EMError.ERROR_FILE_NOT_FOUND/EMError.FILE_NOT_FOUND/
+#s/EMError.GENERAL_ERROR/EMError.GENERAL_ERROR/
+s/EMError.UNKNOW_ERROR/EMError.GENERAL_ERROR/
+s/EMError.UNKNOWN_SERVER_ERROR/EMError.SERVER_UNKNOWN_ERROR/
+s/EMError.NONETWORK_ERROR/EMError.NETWORK_ERROR/
+s/EMError.DNS_ERROR/EMError.SERVER_NOT_REACHABLE/
+s/EMError.UNABLE_CONNECT_TO_SERVER/EMError.SERVER_NOT_REACHABLE/
+s/EMError.CONNECT_TIMER_OUT/EMError.SERVER_TIMEOUT/
+s/EMError.INVALID_PASSWORD_USERNAME/EMError.USER_AUTHENTICATION_FAILED/
+#/EMError.INVALID_KEYSTORE/d
+#/EMError.IO_EXCEPTION/d
+#/EMError.INVALID_CERTIFICATE/d
+s/EMError.ENCRYPTION_ERROR/EMError.MESSAGE_ENCRYPTION_ERROR/
+#/EMError.LOGOFFINPROGRESS_ERROR/d
+s/EMError.INVALID_FILE/EMError.FILE_INVALID/
+s/EMError.FILE_NOT_FOUND/EMError.FILE_NOT_FOUND/
+s/EMError.CONNECTION_CLOSED/EMError.SERVER_NOT_LOGIN/
+s/EMError.CONNECTION_CONFLICT/EMError.USER_LOGIN_ANOTHER_DEVICE/
+s/EMError.USER_ALREADY_EXISTS/EMError.USER_ALREADY_EXIST/
+s/EMError.GROUP_NOT_EXIST_LOCAL/EMError.GROUP_INVALID_ID/
+s/EMError.GROUP_NOT_EXIST/EMError.GROUP_INVALID_ID/
+s/EMError.GROUP_MEMBERS_FULL/EMError.GROUP_MEMBERS_FULL/
+s/EMError.GROUP_ADD_MEMBERS_TOO_MUCH/EMError.GROUP_MEMBERS_FULL/
+s/EMError.GROUP_NO_PERMISSIONS/EMError.GROUP_PERMISSION_DENIED/
+s/EMError.UNAUTHORIZED/EMError.USER_AUTHENTICATION_FAILED/
+#/EMError.CONNECTION_INIT_FAILED/d
+#s/EMError.USER_REMOVED/EMError.USER_REMOVED/
+s/EMError.ALREADY_LOGEDIN/EMError.USER_ALREADY_LOGIN/
+s/EMError.ILLEGAL_USER_NAME/EMError.USER_ILLEGAL_ARGUMENT/
+s/EMError.ERROR_SOCKET_TIME_OUT/EMError.SERVER_TIMEOUT/
+s/EMError.MESSAGE_SEND_NOT_IN_THE_GROUP/EMError.GROUP_NOT_JOINED/
+s/EMError.MESSAGE_SEND_INVALID_CONTENT/EMError.MESSAGE_INCLUDE_ILLEGAL_CONTENT/
+#s/EMError.MESSAGE_SEND_TRAFFIC_LIMIT/EMError.MESSAGE_SEND_TRAFFIC_LIMIT/
+s/EMError.ERROR_UNBIND_DEVICETOKEN/EMError.USER_UNBIND_DEVICETOKEN_FAILED/
+
+
+s/\(^\s*\)\(^.*setNoticedByVibrate\)/\/\/\1hyphenate alert: setNoticedByVibrate migrated in demo\n\1\2/
+s/\(^\s*\)\(^.*setNotificationEnable\)/\/\/\1hyphenate alert: setNotificationEnable migrated in demo\n\1\2/
+
+/CloudOperationCallback/d
+s/conversation.getMsgCount()/conversation.getAllMessages().size()/
+/conversation.addMessage/d
+/conv.addMessage/d
+
+s/\(^\s*\)user.setUsername/\/\/hyphenate alert: use constructor User(String username) instead\n\1user.setUsername/
+s/\(^\s*\)EMChat.getInstance().setEnv/\/\/\1hyphenate alert: no longer support EMChat.getInstance().setEnv method\n\1EMChat.getInstance().setEnv/
+/setNumberOfMessagesLoaded/d
