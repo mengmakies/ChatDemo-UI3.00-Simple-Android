@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="HwPush_SDK_V2705_nomap">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../easeui/libs/HwPush_SDK_V2705_nomap.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
