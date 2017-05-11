@@ -183,6 +183,29 @@ public class UserCacheManager {
     }
 
     /**
+     * 更新当前用户的昵称
+     * @param nickName 昵称
+     */
+    public static void updateMyNick(String nickName){
+        UserCacheInfo user = getMyInfo();
+        if (user == null)  return;
+
+        save(user.getUserId(), nickName, user.getAvatarUrl());
+    }
+
+
+    /**
+     * 更新当前用户的头像
+     * @param avatarUrl 头像Url（完成路径）
+     */
+    public static void updateMyAvatar(String avatarUrl){
+        UserCacheInfo user = getMyInfo();
+        if (user == null)  return;
+
+        save(user.getUserId(), user.getNickName(), avatarUrl);
+    }
+
+    /**
      * 缓存用户信息
      * @param model 用户信息
      * @return
