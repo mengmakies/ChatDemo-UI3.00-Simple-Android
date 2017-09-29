@@ -1,7 +1,5 @@
 package com.hyphenate.chatuidemo.cache;
 
-import android.content.Context;
-import android.support.annotation.Nullable;
 import android.util.Log;
 
 import com.google.gson.Gson;
@@ -9,9 +7,6 @@ import com.hyphenate.chat.EMClient;
 import com.hyphenate.chat.EMMessage;
 import com.hyphenate.easeui.domain.EaseUser;
 import com.j256.ormlite.dao.Dao;
-import com.ta.utdid2.android.utils.StringUtils;
-
-import java.sql.SQLException;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -62,7 +57,8 @@ public class UserCacheManager {
                     if(info == null) return;
 
                     // 缓存到本地
-                    save(userId, info.getNickName(),info.getAvatarUrl());
+                    // info.getOpenId() 为该用户的【环信ID】
+                    save(info.getOpenId(), info.getNickName(),info.getAvatarUrl());
                 }
             });
         }

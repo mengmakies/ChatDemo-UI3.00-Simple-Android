@@ -36,6 +36,7 @@ public class SqliteHelper extends OrmLiteSqliteOpenHelper {
 
     public synchronized static SqliteHelper getInstance(){
         if (mInstance == null) {
+            ///TODO:: 把这里的 DemoApplication.getInstance() 换成自己的Application类实例对象。例如：new MainApplication()
             mInstance = new SqliteHelper(DemoApplication.getInstance());
         }
 
